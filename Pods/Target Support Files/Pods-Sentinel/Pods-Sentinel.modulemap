@@ -1,0 +1,6 @@
+module Pods_Sentinel {
+  umbrella header "Pods-Sentinel-umbrella.h"
+
+  export *
+  module * { export * }
+}

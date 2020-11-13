@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y23-7P-Q5f">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--goToATest-->
+        <scene sceneID="Qd5-O7-Xyu">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="goToATest" storyboardName="Test" referencedIdentifier="goToATest" id="FJ8-7u-jAO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nT8-yO-eRx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVA-tV-bb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="510"/>
+        </scene>
+        <!--MenuViewController-->
+        <scene sceneID="rq7-w3-g7j">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MenuViewController" storyboardName="Main" referencedIdentifier="MenuViewController" id="cl2-eq-Njy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1oQ-1J-3fF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="693"/>
+        </scene>
+        <!--Test History View Controller-->
+        <scene sceneID="CEk-Mu-PEh">
+            <objects>
+                <viewController storyboardIdentifier="testHistoryVC" id="Y23-7P-Q5f" customClass="TestHistoryViewController" customModule="Sentinel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d45-cO-Wwm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="a0R-XK-Red">
+                                <rect key="frame" x="0.0" y="-44" width="320" height="656"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name logo" translatesAutoresizingMaskIntoConstraints="NO" id="9O6-g7-XR8">
+                                <rect key="frame" x="80" y="20" width="160" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="if7-Ht-xaQ" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="61"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdT-kb-Upg">
+                                <rect key="frame" x="20" y="50" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="0bc-Hg-yaX"/>
+                                    <constraint firstAttribute="height" constant="40" id="TxV-BX-Ari"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="meun"/>
+                                <connections>
+                                    <action selector="menuButtonTapped:" destination="Y23-7P-Q5f" eventType="touchUpInside" id="T25-A2-a0O"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHX-aZ-Iqm" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="131" width="280" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fPa-Ns-9qN" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="150"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V7C-gS-4he">
+                                <rect key="frame" x="20" y="361" width="280" height="117"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.57087435787671237" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cJC-cE-aIc">
+                                    <size key="itemSize" width="222" height="68"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="historyCell" id="3Cg-8y-mpv" customClass="HistoryCell" customModule="Sentinel" customModuleProvider="target">
+                                        <rect key="frame" x="29" y="0.0" width="222" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MKx-9C-kYG">
+                                            <rect key="frame" x="0.0" y="0.0" width="222" height="68"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" id="bhi-T8-gG4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="222" height="68"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bhi-T8-gG4" firstAttribute="leading" secondItem="MKx-9C-kYG" secondAttribute="leading" id="0ik-MV-FbC"/>
+                                                <constraint firstAttribute="bottom" secondItem="bhi-T8-gG4" secondAttribute="bottom" id="Vnp-rl-EDZ"/>
+                                                <constraint firstItem="bhi-T8-gG4" firstAttribute="top" secondItem="MKx-9C-kYG" secondAttribute="top" id="fCA-Si-kzY"/>
+                                                <constraint firstAttribute="trailing" secondItem="bhi-T8-gG4" secondAttribute="trailing" id="ugp-La-7FA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="222" height="68"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="historyLabel" destination="bhi-T8-gG4" id="flc-by-sFl"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWY-Bk-jg4">
+                                <rect key="frame" x="40" y="498" width="240" height="50"/>
+                                <color key="backgroundColor" red="0.081760980189999999" green="0.072657771410000002" blue="0.25099614260000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dB1-0k-bOZ" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Back"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="bactButtonTapped:" destination="Y23-7P-Q5f" eventType="touchUpInside" id="7w0-rZ-ATc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="K9Z-Ck-yFt" firstAttribute="bottom" secondItem="nWY-Bk-jg4" secondAttribute="bottom" constant="20" id="17P-ML-WAq"/>
+                            <constraint firstItem="9O6-g7-XR8" firstAttribute="leading" secondItem="MdT-kb-Upg" secondAttribute="trailing" constant="20" id="2LB-kd-P8G"/>
+                            <constraint firstItem="MdT-kb-Upg" firstAttribute="top" secondItem="K9Z-Ck-yFt" secondAttribute="top" constant="50" id="49B-EE-g2t" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="V7C-gS-4he" firstAttribute="top" secondItem="sHX-aZ-Iqm" secondAttribute="bottom" constant="30" id="Abj-jf-eNP"/>
+                            <constraint firstItem="nWY-Bk-jg4" firstAttribute="leading" secondItem="K9Z-Ck-yFt" secondAttribute="leading" constant="40" id="HUu-Zv-4wN"/>
+                            <constraint firstItem="K9Z-Ck-yFt" firstAttribute="trailing" secondItem="nWY-Bk-jg4" secondAttribute="trailing" constant="40" id="I1E-zJ-vSc"/>
+                            <constraint firstItem="MdT-kb-Upg" firstAttribute="leading" secondItem="K9Z-Ck-yFt" secondAttribute="leading" constant="20" id="KJR-wc-ypq"/>
+                            <constraint firstItem="sHX-aZ-Iqm" firstAttribute="top" secondItem="9O6-g7-XR8" secondAttribute="bottom" constant="20" id="L10-Vl-CgE"/>
+                            <constraint firstItem="a0R-XK-Red" firstAttribute="top" secondItem="d45-cO-Wwm" secondAttribute="topMargin" constant="-44" id="L80-nF-bqe"/>
+                            <constraint firstItem="a0R-XK-Red" firstAttribute="centerY" secondItem="d45-cO-Wwm" secondAttribute="centerY" id="LVD-BW-Reu"/>
+                            <constraint firstItem="V7C-gS-4he" firstAttribute="leading" secondItem="K9Z-Ck-yFt" secondAttribute="leading" constant="20" id="N4Q-Ig-P5L"/>
+                            <constraint firstAttribute="trailing" secondItem="9O6-g7-XR8" secondAttribute="trailing" constant="80" id="PCl-97-1js"/>
+                            <constraint firstItem="sHX-aZ-Iqm" firstAttribute="leading" secondItem="K9Z-Ck-yFt" secondAttribute="leading" constant="20" id="Q4x-ME-Qlo"/>
+                            <constraint firstItem="K9Z-Ck-yFt" firstAttribute="trailing" secondItem="V7C-gS-4he" secondAttribute="trailing" constant="20" id="WbV-cJ-MyN"/>
+                            <constraint firstItem="K9Z-Ck-yFt" firstAttribute="bottom" secondItem="V7C-gS-4he" secondAttribute="bottom" constant="90" id="aUA-CX-8dG"/>
+                            <constraint firstItem="9O6-g7-XR8" firstAttribute="leading" secondItem="MdT-kb-Upg" secondAttribute="trailing" constant="20" id="cQX-FH-RfJ"/>
+                            <constraint firstItem="K9Z-Ck-yFt" firstAttribute="trailing" secondItem="sHX-aZ-Iqm" secondAttribute="trailing" constant="20" id="erm-rB-eRs"/>
+                            <constraint firstItem="a0R-XK-Red" firstAttribute="centerX" secondItem="d45-cO-Wwm" secondAttribute="centerX" id="gae-5W-QNg"/>
+                            <constraint firstItem="9O6-g7-XR8" firstAttribute="leading" secondItem="MdT-kb-Upg" secondAttribute="trailing" constant="20" id="rBc-3I-YDr"/>
+                            <constraint firstItem="a0R-XK-Red" firstAttribute="leading" secondItem="K9Z-Ck-yFt" secondAttribute="leading" id="wLZ-q6-lq7"/>
+                            <constraint firstItem="9O6-g7-XR8" firstAttribute="top" secondItem="K9Z-Ck-yFt" secondAttribute="top" constant="20" id="ylw-PX-UKd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K9Z-Ck-yFt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ms6-7L-pxp"/>
+                    <connections>
+                        <outlet property="historyCollection" destination="V7C-gS-4he" id="g2L-Bc-1rH"/>
+                        <outlet property="resultChart" destination="sHX-aZ-Iqm" id="cQS-8X-E2z"/>
+                        <segue destination="FJ8-7u-jAO" kind="presentation" identifier="backToTestHome" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="KrR-K3-8vx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atq-Di-1rn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628.75" y="743.66197183098598"/>
+        </scene>
+        <!--testResultVC-->
+        <scene sceneID="MlP-GN-qL3">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="testResultVC" storyboardName="Test" referencedIdentifier="testResultVC" id="HGT-bY-HId" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AH2-R2-Kdt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHE-eY-jP0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3820" y="709"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="640" height="1136"/>
+        <image name="meun" width="512" height="512"/>
+        <image name="name logo" width="506" height="91"/>
+    </resources>
+</document>
